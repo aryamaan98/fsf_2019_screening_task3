@@ -1,9 +1,10 @@
+
 from PyQt5 import QtCore, QtGui, QtWidgets
 
 class Ui_Steel(object):
     def setupUi(self, Steel):
         Steel.setObjectName("Steel")
-        Steel.resize(715, 308)
+        Steel.resize(715, 348)
         self.pushButton = QtWidgets.QPushButton(Steel)
         self.pushButton.setGeometry(QtCore.QRect(230, 10, 75, 23))
         self.pushButton.setObjectName("pushButton")
@@ -171,6 +172,23 @@ class Ui_Steel(object):
         self.pushButton_3 = QtWidgets.QPushButton(Steel)
         self.pushButton_3.setGeometry(QtCore.QRect(230, 70, 75, 23))
         self.pushButton_3.setObjectName("pushButton_3")
+        self.line_4 = QtWidgets.QFrame(Steel)
+        self.line_4.setGeometry(QtCore.QRect(0, 300, 721, 20))
+        self.line_4.setFrameShape(QtWidgets.QFrame.HLine)
+        self.line_4.setFrameShadow(QtWidgets.QFrame.Sunken)
+        self.line_4.setObjectName("line_4")
+        self.pushButton_4 = QtWidgets.QPushButton(Steel)
+        self.pushButton_4.setGeometry(QtCore.QRect(10, 320, 75, 23))
+        self.pushButton_4.setObjectName("pushButton_4")
+        self.lineEdit_21 = QtWidgets.QLineEdit(Steel)
+        self.lineEdit_21.setGeometry(QtCore.QRect(100, 320, 61, 20))
+        self.lineEdit_21.setObjectName("lineEdit_21")
+        self.label_22 = QtWidgets.QLabel(Steel)
+        self.label_22.setGeometry(QtCore.QRect(180, 320, 191, 21))
+        self.label_22.setObjectName("label_22")
+        self.pushButton_6 = QtWidgets.QPushButton(Steel)
+        self.pushButton_6.setGeometry(QtCore.QRect(230, 100, 75, 23))
+        self.pushButton_6.setObjectName("pushButton_6")
 
         self.retranslateUi(Steel)
         QtCore.QMetaObject.connectSlotsByName(Steel)
@@ -203,6 +221,7 @@ class Ui_Steel(object):
         self.label_20.setText(_translate("Steel", "R2"))
         self.label_21.setText(_translate("Steel", "   Designation"))
         self.pushButton_3.setText(_translate("Steel", "Add"))
-
-
+        self.pushButton_4.setText(_translate("Steel", "Import"))
+        self.label_22.setText(_translate("Steel", "Enter ID to import data from Excel file."))
+        self.pushButton_6.setText(_translate("Steel", "Clear Field"))
 
