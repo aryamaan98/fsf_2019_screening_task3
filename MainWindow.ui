@@ -13,7 +13,7 @@
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
-  <widget class="QPushButton" name="pushButton">
+  <widget class="QPushButton" name="pushButton_loaddata">
    <property name="geometry">
     <rect>
      <x>20</x>
@@ -26,7 +26,7 @@
     <string>Load Data</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_2">
+  <widget class="QPushButton" name="pushButton_b_update">
    <property name="geometry">
     <rect>
      <x>570</x>
@@ -52,7 +52,7 @@
     <enum>Qt::Vertical</enum>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit">
+  <widget class="QLineEdit" name="lineEdit_200">
    <property name="geometry">
     <rect>
      <x>650</x>
@@ -62,7 +62,7 @@
     </rect>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_2">
+  <widget class="QLineEdit" name="lineEdit_201">
    <property name="geometry">
     <rect>
      <x>650</x>
@@ -72,7 +72,7 @@
     </rect>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_3">
+  <widget class="QLineEdit" name="lineEdit_202">
    <property name="geometry">
     <rect>
      <x>650</x>
@@ -82,7 +82,7 @@
     </rect>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_4">
+  <widget class="QLineEdit" name="lineEdit_203">
    <property name="geometry">
     <rect>
      <x>650</x>
@@ -92,7 +92,7 @@
     </rect>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_5">
+  <widget class="QLineEdit" name="lineEdit_204">
    <property name="geometry">
     <rect>
      <x>650</x>
@@ -102,7 +102,7 @@
     </rect>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_6">
+  <widget class="QLineEdit" name="lineEdit_205">
    <property name="geometry">
     <rect>
      <x>650</x>
@@ -112,7 +112,7 @@
     </rect>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_7">
+  <widget class="QLineEdit" name="lineEdit_206">
    <property name="geometry">
     <rect>
      <x>650</x>
@@ -122,7 +122,7 @@
     </rect>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_8">
+  <widget class="QLineEdit" name="lineEdit_207">
    <property name="geometry">
     <rect>
      <x>650</x>
@@ -132,7 +132,7 @@
     </rect>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_9">
+  <widget class="QLineEdit" name="lineEdit_208">
    <property name="geometry">
     <rect>
      <x>650</x>
@@ -142,7 +142,7 @@
     </rect>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_10">
+  <widget class="QLineEdit" name="lineEdit_209">
    <property name="geometry">
     <rect>
      <x>650</x>
@@ -152,7 +152,7 @@
     </rect>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_11">
+  <widget class="QLineEdit" name="lineEdit_214">
    <property name="geometry">
     <rect>
      <x>850</x>
@@ -162,7 +162,7 @@
     </rect>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_12">
+  <widget class="QLineEdit" name="lineEdit_211">
    <property name="geometry">
     <rect>
      <x>850</x>
@@ -172,7 +172,7 @@
     </rect>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_13">
+  <widget class="QLineEdit" name="lineEdit_213">
    <property name="geometry">
     <rect>
      <x>850</x>
@@ -182,7 +182,7 @@
     </rect>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_14">
+  <widget class="QLineEdit" name="lineEdit_212">
    <property name="geometry">
     <rect>
      <x>850</x>
@@ -192,7 +192,7 @@
     </rect>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_15">
+  <widget class="QLineEdit" name="lineEdit_219">
    <property name="geometry">
     <rect>
      <x>850</x>
@@ -202,7 +202,7 @@
     </rect>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_16">
+  <widget class="QLineEdit" name="lineEdit_216">
    <property name="geometry">
     <rect>
      <x>850</x>
@@ -212,7 +212,7 @@
     </rect>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_17">
+  <widget class="QLineEdit" name="lineEdit_217">
    <property name="geometry">
     <rect>
      <x>850</x>
@@ -222,7 +222,7 @@
     </rect>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_18">
+  <widget class="QLineEdit" name="lineEdit_215">
    <property name="geometry">
     <rect>
      <x>850</x>
@@ -232,7 +232,7 @@
     </rect>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_19">
+  <widget class="QLineEdit" name="lineEdit_218">
    <property name="geometry">
     <rect>
      <x>850</x>
@@ -522,7 +522,7 @@
     <string>   Designation</string>
    </property>
   </widget>
-  <widget class="QPlainTextEdit" name="plainTextEdit">
+  <widget class="QPlainTextEdit" name="plainTextEdit_beam">
    <property name="geometry">
     <rect>
      <x>700</x>
@@ -539,7 +539,7 @@
     </font>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_3">
+  <widget class="QPushButton" name="pushButton_b_add">
    <property name="geometry">
     <rect>
      <x>570</x>
@@ -552,7 +552,7 @@
     <string>Add</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_4">
+  <widget class="QPushButton" name="pushButton_b_import">
    <property name="geometry">
     <rect>
      <x>570</x>
@@ -565,7 +565,7 @@
     <string>Import</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_6">
+  <widget class="QPushButton" name="pushButton_b_cf">
    <property name="geometry">
     <rect>
      <x>570</x>
@@ -578,7 +578,7 @@
     <string>Clear Field</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_20">
+  <widget class="QLineEdit" name="lineEdit_210">
    <property name="geometry">
     <rect>
      <x>850</x>
@@ -588,7 +588,7 @@
     </rect>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_21">
+  <widget class="QLineEdit" name="lineEdit_109">
    <property name="geometry">
     <rect>
      <x>234</x>
@@ -611,7 +611,7 @@
     <string>Cy</string>
    </property>
   </widget>
-  <widget class="QPlainTextEdit" name="plainTextEdit_2">
+  <widget class="QPlainTextEdit" name="plainTextEdit_angle">
    <property name="geometry">
     <rect>
      <x>284</x>
@@ -654,7 +654,7 @@
     <string>lz</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_22">
+  <widget class="QLineEdit" name="lineEdit_108">
    <property name="geometry">
     <rect>
      <x>234</x>
@@ -664,7 +664,7 @@
     </rect>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_24">
+  <widget class="QLineEdit" name="lineEdit_104">
    <property name="geometry">
     <rect>
      <x>234</x>
@@ -687,7 +687,7 @@
     <string>ru(min)</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_5">
+  <widget class="QPushButton" name="pushButton_a_add">
    <property name="geometry">
     <rect>
      <x>154</x>
@@ -752,7 +752,7 @@
     <string>R2</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_25">
+  <widget class="QLineEdit" name="lineEdit_110">
    <property name="geometry">
     <rect>
      <x>234</x>
@@ -762,7 +762,7 @@
     </rect>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_26">
+  <widget class="QLineEdit" name="lineEdit_101">
    <property name="geometry">
     <rect>
      <x>234</x>
@@ -772,7 +772,7 @@
     </rect>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_27">
+  <widget class="QLineEdit" name="lineEdit_105">
    <property name="geometry">
     <rect>
      <x>234</x>
@@ -782,7 +782,7 @@
     </rect>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_28">
+  <widget class="QLineEdit" name="lineEdit_102">
    <property name="geometry">
     <rect>
      <x>234</x>
@@ -818,7 +818,7 @@
     <string>Tan?</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_7">
+  <widget class="QPushButton" name="pushButton_a_cf">
    <property name="geometry">
     <rect>
      <x>154</x>
@@ -831,7 +831,7 @@
     <string>Clear Field</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_8">
+  <widget class="QPushButton" name="pushButton_a_update">
    <property name="geometry">
     <rect>
      <x>154</x>
@@ -857,7 +857,7 @@
     <string>ID</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_30">
+  <widget class="QLineEdit" name="lineEdit_106">
    <property name="geometry">
     <rect>
      <x>234</x>
@@ -893,7 +893,7 @@
     <string>Zz</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_32">
+  <widget class="QLineEdit" name="lineEdit_103">
    <property name="geometry">
     <rect>
      <x>234</x>
@@ -916,7 +916,7 @@
     <string>Designation</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_34">
+  <widget class="QLineEdit" name="lineEdit_107">
    <property name="geometry">
     <rect>
      <x>234</x>
@@ -952,7 +952,7 @@
     <string>ry</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_36">
+  <widget class="QLineEdit" name="lineEdit_111">
    <property name="geometry">
     <rect>
      <x>234</x>
@@ -995,7 +995,7 @@
     <string>Area</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_9">
+  <widget class="QPushButton" name="pushButton_a_import">
    <property name="geometry">
     <rect>
      <x>154</x>
@@ -1021,7 +1021,7 @@
     <string>AXB</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_39">
+  <widget class="QLineEdit" name="lineEdit_100">
    <property name="geometry">
     <rect>
      <x>234</x>
@@ -1070,7 +1070,7 @@
     <string>lu(max)</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_41">
+  <widget class="QLineEdit" name="lineEdit_309">
    <property name="geometry">
     <rect>
      <x>1084</x>
@@ -1093,7 +1093,7 @@
     <string>R1</string>
    </property>
   </widget>
-  <widget class="QPlainTextEdit" name="plainTextEdit_3">
+  <widget class="QPlainTextEdit" name="plainTextEdit_channel">
    <property name="geometry">
     <rect>
      <x>1124</x>
@@ -1136,7 +1136,7 @@
     <string>lz</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_42">
+  <widget class="QLineEdit" name="lineEdit_308">
    <property name="geometry">
     <rect>
      <x>1084</x>
@@ -1146,7 +1146,7 @@
     </rect>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_43">
+  <widget class="QLineEdit" name="lineEdit_317">
    <property name="geometry">
     <rect>
      <x>1284</x>
@@ -1156,7 +1156,7 @@
     </rect>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_44">
+  <widget class="QLineEdit" name="lineEdit_304">
    <property name="geometry">
     <rect>
      <x>1084</x>
@@ -1179,7 +1179,7 @@
     <string>Zpy</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_10">
+  <widget class="QPushButton" name="pushButton_c_add">
    <property name="geometry">
     <rect>
      <x>994</x>
@@ -1244,7 +1244,7 @@
     <string>T</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_45">
+  <widget class="QLineEdit" name="lineEdit_311">
    <property name="geometry">
     <rect>
      <x>1284</x>
@@ -1254,7 +1254,7 @@
     </rect>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_46">
+  <widget class="QLineEdit" name="lineEdit_301">
    <property name="geometry">
     <rect>
      <x>1084</x>
@@ -1264,7 +1264,7 @@
     </rect>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_47">
+  <widget class="QLineEdit" name="lineEdit_305">
    <property name="geometry">
     <rect>
      <x>1084</x>
@@ -1274,7 +1274,7 @@
     </rect>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_48">
+  <widget class="QLineEdit" name="lineEdit_302">
    <property name="geometry">
     <rect>
      <x>1084</x>
@@ -1310,7 +1310,7 @@
     <string>R2</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_49">
+  <widget class="QLineEdit" name="lineEdit_319">
    <property name="geometry">
     <rect>
      <x>1284</x>
@@ -1320,7 +1320,7 @@
     </rect>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_11">
+  <widget class="QPushButton" name="pushButton_c_cf">
    <property name="geometry">
     <rect>
      <x>994</x>
@@ -1333,7 +1333,7 @@
     <string>Clear Field</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_12">
+  <widget class="QPushButton" name="pushButton_c_update">
    <property name="geometry">
     <rect>
      <x>994</x>
@@ -1359,7 +1359,7 @@
     <string>ID</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_50">
+  <widget class="QLineEdit" name="lineEdit_306">
    <property name="geometry">
     <rect>
      <x>1084</x>
@@ -1382,7 +1382,7 @@
     <string>Zpz</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_51">
+  <widget class="QLineEdit" name="lineEdit_316">
    <property name="geometry">
     <rect>
      <x>1284</x>
@@ -1405,7 +1405,7 @@
     <string>Source</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_52">
+  <widget class="QLineEdit" name="lineEdit_303">
    <property name="geometry">
     <rect>
      <x>1084</x>
@@ -1428,7 +1428,7 @@
     <string>Designation</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_53">
+  <widget class="QLineEdit" name="lineEdit_314">
    <property name="geometry">
     <rect>
      <x>1284</x>
@@ -1438,7 +1438,7 @@
     </rect>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_54">
+  <widget class="QLineEdit" name="lineEdit_307">
    <property name="geometry">
     <rect>
      <x>1084</x>
@@ -1474,7 +1474,7 @@
     <string>Zy</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_55">
+  <widget class="QLineEdit" name="lineEdit_318">
    <property name="geometry">
     <rect>
      <x>1284</x>
@@ -1484,7 +1484,7 @@
     </rect>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_56">
+  <widget class="QLineEdit" name="lineEdit_312">
    <property name="geometry">
     <rect>
      <x>1284</x>
@@ -1494,7 +1494,7 @@
     </rect>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_57">
+  <widget class="QLineEdit" name="lineEdit_313">
    <property name="geometry">
     <rect>
      <x>1284</x>
@@ -1524,7 +1524,7 @@
     <string>   Designation</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_58">
+  <widget class="QLineEdit" name="lineEdit_320">
    <property name="geometry">
     <rect>
      <x>1284</x>
@@ -1547,7 +1547,7 @@
     <string>Area</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_13">
+  <widget class="QPushButton" name="pushButton_c_import">
    <property name="geometry">
     <rect>
      <x>994</x>
@@ -1573,7 +1573,7 @@
     <string>D</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_59">
+  <widget class="QLineEdit" name="lineEdit_300">
    <property name="geometry">
     <rect>
      <x>1084</x>
@@ -1609,7 +1609,7 @@
     <enum>Qt::Vertical</enum>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_60">
+  <widget class="QLineEdit" name="lineEdit_315">
    <property name="geometry">
     <rect>
      <x>1284</x>
@@ -1731,7 +1731,7 @@
     <enum>Qt::Vertical</enum>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_23">
+  <widget class="QLineEdit" name="lineEdit_120">
    <property name="geometry">
     <rect>
      <x>430</x>
@@ -1741,7 +1741,7 @@
     </rect>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_29">
+  <widget class="QLineEdit" name="lineEdit_113">
    <property name="geometry">
     <rect>
      <x>430</x>
@@ -1751,7 +1751,7 @@
     </rect>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_31">
+  <widget class="QLineEdit" name="lineEdit_121">
    <property name="geometry">
     <rect>
      <x>430</x>
@@ -1761,7 +1761,7 @@
     </rect>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_37">
+  <widget class="QLineEdit" name="lineEdit_123">
    <property name="geometry">
     <rect>
      <x>430</x>
@@ -1771,7 +1771,7 @@
     </rect>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_40">
+  <widget class="QLineEdit" name="lineEdit_112">
    <property name="geometry">
     <rect>
      <x>430</x>
@@ -1781,7 +1781,7 @@
     </rect>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_33">
+  <widget class="QLineEdit" name="lineEdit_114">
    <property name="geometry">
     <rect>
      <x>430</x>
@@ -1791,7 +1791,7 @@
     </rect>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_35">
+  <widget class="QLineEdit" name="lineEdit_122">
    <property name="geometry">
     <rect>
      <x>430</x>
@@ -1801,7 +1801,7 @@
     </rect>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_38">
+  <widget class="QLineEdit" name="lineEdit_119">
    <property name="geometry">
     <rect>
      <x>430</x>
@@ -1811,7 +1811,7 @@
     </rect>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_61">
+  <widget class="QLineEdit" name="lineEdit_117">
    <property name="geometry">
     <rect>
      <x>430</x>
@@ -1821,7 +1821,7 @@
     </rect>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_62">
+  <widget class="QLineEdit" name="lineEdit_116">
    <property name="geometry">
     <rect>
      <x>430</x>
@@ -1831,7 +1831,7 @@
     </rect>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_63">
+  <widget class="QLineEdit" name="lineEdit_118">
    <property name="geometry">
     <rect>
      <x>430</x>
@@ -1841,7 +1841,7 @@
     </rect>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_64">
+  <widget class="QLineEdit" name="lineEdit_115">
    <property name="geometry">
     <rect>
      <x>430</x>
@@ -1903,7 +1903,7 @@
     <string>Source</string>
    </property>
   </widget>
-  <widget class="QLineEdit" name="lineEdit_65">
+  <widget class="QLineEdit" name="lineEdit_310">
    <property name="geometry">
     <rect>
      <x>1084</x>
@@ -1926,7 +1926,7 @@
     <string>Cy</string>
    </property>
   </widget>
-  <widget class="QPushButton" name="pushButton_14">
+  <widget class="QPushButton" name="pushButton_exit">
    <property name="geometry">
     <rect>
      <x>20</x>
