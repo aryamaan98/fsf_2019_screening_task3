@@ -21,13 +21,11 @@ class MainWindow(QMainWindow, Ui_Steel):
         self.pushButton_a_load.clicked.connect(self.LoadAngle)
         self.pushButton_b_load.clicked.connect(self.LoadBeam)
         self.pushButton_c_load.clicked.connect(self.LoadChannel)
-    # def click_load_db(self):
-    #     # self.c.execute('SELECT * FROM Angles')
-    #     # data_angle = self.c.fetchall()
-    #     # # for i in data_angle:
-    #     # #     self.cursor = QTextCursor(self.textEdit_angle.document())
-    #     # #     self.cursor.insertText(str(i[1] + "\n"))
-    #     # QMessageBox.question(self,"Load Data","Done !",QMessageBox.Ok,QMessageBox.Ok)
+        self.pushButton_a_clear.clicked.connect(self.clear_a)
+        self.pushButton_b_clear.clicked.connect(self.clear_b)
+        self.pushButton_c_clear.clicked.connect(self.clear_c)
+        self.pushButton_a_add.clicked.connect(self.add_a)
+        self.pushButton_exit.clicked.connect(self.exit)
     def LoadAngle(self):
         designation = []
         self.c.execute("select * from Angles")
@@ -132,6 +130,92 @@ class MainWindow(QMainWindow, Ui_Steel):
                 self.lineEdit_320.setText(str(i[20]))
         else:
             pass
+    def clear_a(self):
+        self.lineEdit_100.setText("")
+        self.lineEdit_101.setText("")
+        self.lineEdit_102.setText("")
+        self.lineEdit_103.setText("")
+        self.lineEdit_104.setText("")
+        self.lineEdit_105.setText("")
+        self.lineEdit_106.setText("")
+        self.lineEdit_107.setText("")
+        self.lineEdit_108.setText("")
+        self.lineEdit_109.setText("")
+        self.lineEdit_110.setText("")
+        self.lineEdit_111.setText("")
+        self.lineEdit_112.setText("")
+        self.lineEdit_113.setText("")
+        self.lineEdit_114.setText("")
+        self.lineEdit_115.setText("")
+        self.lineEdit_116.setText("")
+        self.lineEdit_117.setText("")
+        self.lineEdit_118.setText("")
+        self.lineEdit_119.setText("")
+        self.lineEdit_120.setText("")
+        self.lineEdit_121.setText("")
+        self.lineEdit_122.setText("")
+        self.lineEdit_123.setText("")
+        QMessageBox.question(self,"Clear Filed","Done !",QMessageBox.Ok,QMessageBox.Ok)
+    def clear_b(self):
+        self.lineEdit_200.setText("")
+        self.lineEdit_201.setText("")
+        self.lineEdit_202.setText("")
+        self.lineEdit_203.setText("")
+        self.lineEdit_204.setText("")
+        self.lineEdit_205.setText("")
+        self.lineEdit_206.setText("")
+        self.lineEdit_207.setText("")
+        self.lineEdit_208.setText("")
+        self.lineEdit_209.setText("")
+        self.lineEdit_210.setText("")
+        self.lineEdit_211.setText("")
+        self.lineEdit_212.setText("")
+        self.lineEdit_213.setText("")
+        self.lineEdit_214.setText("")
+        self.lineEdit_215.setText("")
+        self.lineEdit_216.setText("")
+        self.lineEdit_217.setText("")
+        self.lineEdit_218.setText("")
+        self.lineEdit_219.setText("")
+        QMessageBox.question(self,"Clear Filed","Done !",QMessageBox.Ok,QMessageBox.Ok)
+    def clear_c(self):
+        self.lineEdit_300.setText("")
+        self.lineEdit_301.setText("")
+        self.lineEdit_302.setText("")
+        self.lineEdit_303.setText("")
+        self.lineEdit_304.setText("")
+        self.lineEdit_305.setText("")
+        self.lineEdit_306.setText("")
+        self.lineEdit_307.setText("")
+        self.lineEdit_308.setText("")
+        self.lineEdit_309.setText("")
+        self.lineEdit_310.setText("")
+        self.lineEdit_311.setText("")
+        self.lineEdit_312.setText("")
+        self.lineEdit_313.setText("")
+        self.lineEdit_314.setText("")
+        self.lineEdit_315.setText("")
+        self.lineEdit_316.setText("")
+        self.lineEdit_317.setText("")
+        self.lineEdit_318.setText("")
+        self.lineEdit_319.setText("")
+        self.lineEdit_320.setText("")
+        QMessageBox.question(self,"Clear Filed","Done !",QMessageBox.Ok,QMessageBox.Ok)
+    def add_a(self):
+        query = "insert into Angles (ID,Designation,Mass,Area,AXB,t,R1,R2,Cz,Cy,Tan?,Iz,Iy,Iu(max),Iv(min),rz,ry,ru(max),rv(min),Zz,Zy,Zpz,Zpy,Source) values \
+            ('"+str(self.lineEdit_100.text())+"','"+str(self.lineEdit_101.text())+"','"+str(self.lineEdit_102.text())+"','"+str(self.lineEdit_103.text())+"',\
+                '"+str(self.lineEdit_104.text())+"','"+str(self.lineEdit_105.text())+"','"+str(self.lineEdit_106.text())+"','"+str(self.lineEdit_107.text())+"',\
+                    '"+str(self.lineEdit_108.text())+"','"+str(self.lineEdit_109.text())+"','"+str(self.lineEdit_110.text())+"','"+str(self.lineEdit_111.text())+"',\
+                        '"+str(self.lineEdit_112.text())+"','"+str(self.lineEdit_113.text())+"','"+str(self.lineEdit_114.text())+"','"+str(self.lineEdit_115.text())+"',\
+                        '"+str(self.lineEdit_116.text())+"','"+str(self.lineEdit_117.text())+"','"+str(self.lineEdit_118.text())+"','"+str(self.lineEdit_119.text())+"',\
+                            '"+str(self.lineEdit_120.text())+"','"+str(self.lineEdit_121.text())+"','"+str(self.lineEdit_122.text())+"','"+str(self.lineEdit_123.text())+"');"
+        self.c.execute(query)
+        self.c.commit()
+        QMessageBox.question(self,"Adding Data","Done !",QMessageBox.Ok,QMessageBox.Ok)
+    def exit(self):
+        import sys
+        QMessageBox.question(self,"Exit","All Changes are saved !",QMessageBox.Ok,QMessageBox.Ok)
+        sys.exit()
     
 
         
