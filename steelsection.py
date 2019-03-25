@@ -202,15 +202,15 @@ class MainWindow(QMainWindow, Ui_Steel):
         self.lineEdit_320.setText("")
         QMessageBox.question(self,"Clear Filed","Done !",QMessageBox.Ok,QMessageBox.Ok)
     def add_a(self):
-        query = "insert into Angles (ID,Designation,Mass,Area,AXB,t,R1,R2,Cz,Cy,Tan?,Iz,Iy,Iu(max),Iv(min),rz,ry,ru(max),rv(min),Zz,Zy,Zpz,Zpy,Source) values \
-            ('"+str(self.lineEdit_100.text())+"','"+str(self.lineEdit_101.text())+"','"+str(self.lineEdit_102.text())+"','"+str(self.lineEdit_103.text())+"',\
-                '"+str(self.lineEdit_104.text())+"','"+str(self.lineEdit_105.text())+"','"+str(self.lineEdit_106.text())+"','"+str(self.lineEdit_107.text())+"',\
-                    '"+str(self.lineEdit_108.text())+"','"+str(self.lineEdit_109.text())+"','"+str(self.lineEdit_110.text())+"','"+str(self.lineEdit_111.text())+"',\
-                        '"+str(self.lineEdit_112.text())+"','"+str(self.lineEdit_113.text())+"','"+str(self.lineEdit_114.text())+"','"+str(self.lineEdit_115.text())+"',\
-                        '"+str(self.lineEdit_116.text())+"','"+str(self.lineEdit_117.text())+"','"+str(self.lineEdit_118.text())+"','"+str(self.lineEdit_119.text())+"',\
-                            '"+str(self.lineEdit_120.text())+"','"+str(self.lineEdit_121.text())+"','"+str(self.lineEdit_122.text())+"','"+str(self.lineEdit_123.text())+"');"
-        self.c.execute(query)
-        self.c.commit()
+        # query = "insert into Angles (ID,Designation,Mass,Area,AXB,t,R1,R2,Cz,Cy,Tan?,Iz,Iy,Iu(max),Iv(min),rz,ry,ru(max),rv(min),Zz,Zy,Zpz,Zpy,Source) values \
+        #     ('"+str(self.lineEdit_100.text())+"','"+str(self.lineEdit_101.text())+"','"+str(self.lineEdit_102.text())+"','"+str(self.lineEdit_103.text())+"',\
+        #         '"+str(self.lineEdit_104.text())+"','"+str(self.lineEdit_105.text())+"','"+str(self.lineEdit_106.text())+"','"+str(self.lineEdit_107.text())+"',\
+        #             '"+str(self.lineEdit_108.text())+"','"+str(self.lineEdit_109.text())+"','"+str(self.lineEdit_110.text())+"','"+str(self.lineEdit_111.text())+"',\
+        #                 '"+str(self.lineEdit_112.text())+"','"+str(self.lineEdit_113.text())+"','"+str(self.lineEdit_114.text())+"','"+str(self.lineEdit_115.text())+"',\
+        #                 '"+str(self.lineEdit_116.text())+"','"+str(self.lineEdit_117.text())+"','"+str(self.lineEdit_118.text())+"','"+str(self.lineEdit_119.text())+"',\
+        #                     '"+str(self.lineEdit_120.text())+"','"+str(self.lineEdit_121.text())+"','"+str(self.lineEdit_122.text())+"','"+str(self.lineEdit_123.text())+"');"
+        # self.c.execute(query)
+        
         QMessageBox.question(self,"Adding Data","Done !",QMessageBox.Ok,QMessageBox.Ok)
     def exit(self):
         import sys
