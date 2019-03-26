@@ -1,6 +1,6 @@
 # fsf_2019_screening_task3
 ### Desktop Application for displayig the properties of Steel Sections
-####PyQt5
+###PyQt5
 `PyQt5` is a comprehensive set of Python bindings for Qt v5. It is implemented as more than 35 extension modules and
 enables Python to be used as an alternative application development language to C++ on all supported platforms 
 including iOS and Android.
@@ -26,7 +26,7 @@ python steelsection.py
 ## Application
 
 <p align="center" markdown="1">
-  <img src="img/application.png" width="1000" height="600" alt="Fyne Hello Dark Theme" />
+  <img src="img/application.png" width="700" height="450" alt="Fyne Hello Dark Theme" />
 </p>
 
 
