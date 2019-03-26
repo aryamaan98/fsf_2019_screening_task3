@@ -1,11 +1,3 @@
-# -*- coding: utf-8 -*-
-
-# Form implementation generated from reading ui file 'MainWindow.ui'
-#
-# Created by: PyQt5 UI code generator 5.11.3
-#
-# WARNING! All changes made in this file will be lost!
-
 from PyQt5 import QtCore, QtGui, QtWidgets
 
 class Ui_Steel(object):
@@ -569,13 +561,4 @@ class Ui_Steel(object):
         self.pushButton_b_load.setText(_translate("Steel", "Load Data"))
         self.pushButton_c_load.setText(_translate("Steel", "Load Data"))
 
-
-# if __name__ == "__main__":
-#     import sys
-#     app = QtWidgets.QApplication(sys.argv)
-#     Steel = QtWidgets.QDialog()
-#     ui = Ui_Steel()
-#     ui.setupUi(Steel)
-#     Steel.show()
-#     sys.exit(app.exec_())
 
