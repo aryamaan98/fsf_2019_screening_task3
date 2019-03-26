@@ -6,6 +6,7 @@ from PyQt5.QtCore import *
 
 from MainWindow import Ui_Steel
 import sqlite3
+import xlrd
 
 class MainWindow(QMainWindow, Ui_Steel):
     def __init__(self, *args, **kwargs):
@@ -25,6 +26,11 @@ class MainWindow(QMainWindow, Ui_Steel):
         self.pushButton_b_clear.clicked.connect(self.clear_b)
         self.pushButton_c_clear.clicked.connect(self.clear_c)
         self.pushButton_a_add.clicked.connect(self.add_a)
+        self.pushButton_b_add.clicked.connect(self.add_b)
+        self.pushButton_c_add.clicked.connect(self.add_c)
+        self.pushButton_a_import.clicked.connect(self.import_a)
+        self.pushButton_b_import.clicked.connect(self.import_b)
+        self.pushButton_c_import.clicked.connect(self.import_c)
         self.pushButton_exit.clicked.connect(self.exit)
     def LoadAngle(self):
         designation = []
@@ -202,29 +208,106 @@ class MainWindow(QMainWindow, Ui_Steel):
         self.lineEdit_320.setText("")
         QMessageBox.question(self,"Clear Filed","Done !",QMessageBox.Ok,QMessageBox.Ok)
     def add_a(self):
-        # query = "insert into Angles (ID,Designation,Mass,Area,AXB,t,R1,R2,Cz,Cy,Tan?,Iz,Iy,Iu(max),Iv(min),rz,ry,ru(max),rv(min),Zz,Zy,Zpz,Zpy,Source) values \
-        #     ('"+str(self.lineEdit_100.text())+"','"+str(self.lineEdit_101.text())+"','"+str(self.lineEdit_102.text())+"','"+str(self.lineEdit_103.text())+"',\
-        #         '"+str(self.lineEdit_104.text())+"','"+str(self.lineEdit_105.text())+"','"+str(self.lineEdit_106.text())+"','"+str(self.lineEdit_107.text())+"',\
-        #             '"+str(self.lineEdit_108.text())+"','"+str(self.lineEdit_109.text())+"','"+str(self.lineEdit_110.text())+"','"+str(self.lineEdit_111.text())+"',\
-        #                 '"+str(self.lineEdit_112.text())+"','"+str(self.lineEdit_113.text())+"','"+str(self.lineEdit_114.text())+"','"+str(self.lineEdit_115.text())+"',\
-        #                 '"+str(self.lineEdit_116.text())+"','"+str(self.lineEdit_117.text())+"','"+str(self.lineEdit_118.text())+"','"+str(self.lineEdit_119.text())+"',\
-        #                     '"+str(self.lineEdit_120.text())+"','"+str(self.lineEdit_121.text())+"','"+str(self.lineEdit_122.text())+"','"+str(self.lineEdit_123.text())+"');"
-        # self.c.execute(query)
-        
-        QMessageBox.question(self,"Adding Data","Done !",QMessageBox.Ok,QMessageBox.Ok)
+        # check_query = "select Id from Angles where Id =?",(str(self.lineEdit_100.text(),)
+        self.c.execute("select Id from Angles where Id =?",(str(self.lineEdit_100.text()),))
+        q_check = self.c.fetchall()
+        if q_check:
+            QMessageBox.question(self,"Error","Steel with this id already exists. ",QMessageBox.Ok,QMessageBox.Ok)
+        else:
+            query = "insert into Angles values ('"+str(self.lineEdit_100.text())+"','"+str(self.lineEdit_101.text())+"','"+str(self.lineEdit_102.text())+"','"+str(self.lineEdit_103.text())+"',\
+                '"+str(self.lineEdit_104.text())+"','"+str(self.lineEdit_105.text())+"','"+str(self.lineEdit_106.text())+"','"+str(self.lineEdit_107.text())+"',\
+                    '"+str(self.lineEdit_108.text())+"','"+str(self.lineEdit_109.text())+"','"+str(self.lineEdit_110.text())+"','"+str(self.lineEdit_111.text())+"',\
+                        '"+str(self.lineEdit_112.text())+"','"+str(self.lineEdit_113.text())+"','"+str(self.lineEdit_114.text())+"','"+str(self.lineEdit_115.text())+"',\
+                        '"+str(self.lineEdit_116.text())+"','"+str(self.lineEdit_117.text())+"','"+str(self.lineEdit_118.text())+"','"+str(self.lineEdit_119.text())+"',\
+                            '"+str(self.lineEdit_120.text())+"','"+str(self.lineEdit_121.text())+"','"+str(self.lineEdit_122.text())+"','"+str(self.lineEdit_123.text())+"');"
+            self.c.execute(query)
+            self.conn.commit()
+            QMessageBox.question(self,"Adding Angles","Done !",QMessageBox.Ok,QMessageBox.Ok)
+    def add_b(self):
+        self.c.execute("select Id from Beams where Id =?",(str(self.lineEdit_200.text()),))
+        q_check = self.c.fetchall()
+        if q_check:
+            QMessageBox.question(self,"Error","Steel with this id already exists. ",QMessageBox.Ok,QMessageBox.Ok)
+        else:
+            query = "insert into Beams values ('"+str(self.lineEdit_200.text())+"','"+str(self.lineEdit_201.text())+"','"+str(self.lineEdit_202.text())+"','"+str(self.lineEdit_203.text())+"',\
+                '"+str(self.lineEdit_204.text())+"','"+str(self.lineEdit_205.text())+"','"+str(self.lineEdit_206.text())+"','"+str(self.lineEdit_207.text())+"',\
+                    '"+str(self.lineEdit_208.text())+"','"+str(self.lineEdit_209.text())+"','"+str(self.lineEdit_210.text())+"','"+str(self.lineEdit_211.text())+"',\
+                        '"+str(self.lineEdit_212.text())+"','"+str(self.lineEdit_213.text())+"','"+str(self.lineEdit_214.text())+"','"+str(self.lineEdit_215.text())+"',\
+                        '"+str(self.lineEdit_216.text())+"','"+str(self.lineEdit_217.text())+"','"+str(self.lineEdit_218.text())+"','"+str(self.lineEdit_219.text())+"');"
+            self.c.execute(query)
+            self.conn.commit()
+            QMessageBox.question(self,"Adding Beams","Done !",QMessageBox.Ok,QMessageBox.Ok)
+    def add_c(self):
+        self.c.execute("select Id from Channels where Id =?",(str(self.lineEdit_300.text()),))
+        q_check = self.c.fetchall()
+        if q_check:
+            QMessageBox.question(self,"Error","Steel with this id already exists. ",QMessageBox.Ok,QMessageBox.Ok)
+        else:
+            query = "insert into Channels values ('"+str(self.lineEdit_300.text())+"','"+str(self.lineEdit_301.text())+"','"+str(self.lineEdit_302.text())+"','"+str(self.lineEdit_303.text())+"',\
+                '"+str(self.lineEdit_304.text())+"','"+str(self.lineEdit_305.text())+"','"+str(self.lineEdit_306.text())+"','"+str(self.lineEdit_307.text())+"',\
+                    '"+str(self.lineEdit_308.text())+"','"+str(self.lineEdit_309.text())+"','"+str(self.lineEdit_310.text())+"','"+str(self.lineEdit_311.text())+"',\
+                        '"+str(self.lineEdit_312.text())+"','"+str(self.lineEdit_313.text())+"','"+str(self.lineEdit_314.text())+"','"+str(self.lineEdit_315.text())+"',\
+                        '"+str(self.lineEdit_316.text())+"','"+str(self.lineEdit_317.text())+"','"+str(self.lineEdit_318.text())+"','"+str(self.lineEdit_319.text())+"',\
+                            '"+str(self.lineEdit_320.text())+"');"
+            self.c.execute(query)
+            self.conn.commit()
+            QMessageBox.question(self,"Adding Channels","Done !",QMessageBox.Ok,QMessageBox.Ok)
+    def import_a(self):
+        book = xlrd.open_workbook('new_sections.xlsx')
+        second_sheet = book.sheet_by_index(1)
+        id_list = []
+        for i in range(1,second_sheet.nrows):
+            id_list.append(str(int(second_sheet.row_values(i)[0])))
+        input_id,ok=QtWidgets.QInputDialog.getItem(self,"Import Angles","Select an id to import its data",id_list,0,False)
+        if ok:
+            data = second_sheet.row_values(int(input_id) - 6)
+            query = "insert into Angles values ('"+str(data[0])+"','"+str(data[1])+"','"+str(data[2])+"','"+str(data[3])+"','"+str(data[4])+"','"+str(data[5])+"','"+str(data[6])+"','"+str(data[7])+"','"+str(data[8])+"',\
+                '"+str(data[9])+"','"+str(data[10])+"','"+str(data[11])+"','"+str(data[12])+"','"+str(data[13])+"','"+str(data[14])+"','"+str(data[15])+"','"+str(data[16])+"','"+str(data[17])+"','"+data[18]+"','"+data[19]+"','"+data[20]+"',\
+                    '"+str(data[21])+"','"+str(data[22])+"','"+str(data[23])+"');"
+            self.c.execute(query)
+            self.conn.commit()
+            QMessageBox.question(self,"Adding Angles","Done !",QMessageBox.Ok,QMessageBox.Ok)
+        else:
+            pass
+    def import_b(self):
+        book = xlrd.open_workbook('new_sections.xlsx')
+        first_sheet = book.sheet_by_index(0)
+        id_list = []
+        for i in range(1,first_sheet.nrows):
+            id_list.append(str(int(first_sheet.row_values(i)[0])))
+        input_id,ok=QtWidgets.QInputDialog.getItem(self,"Import Beams","Select an id to import its data",id_list,0,False)
+        if ok:
+            data = first_sheet.row_values(int(input_id) - 9)
+            query = "insert into Beams values ('"+str(data[0])+"','"+str(data[1])+"','"+str(data[2])+"','"+str(data[3])+"','"+str(data[4])+"','"+str(data[5])+"','"+str(data[6])+"','"+str(data[7])+"','"+str(data[8])+"',\
+                '"+str(data[9])+"','"+str(data[10])+"','"+str(data[11])+"','"+str(data[12])+"','"+str(data[13])+"','"+str(data[14])+"','"+str(data[15])+"','"+str(data[16])+"','"+str(data[17])+"','"+data[18]+"',\
+                    '"+data[19]+"');"
+            self.c.execute(query)
+            self.conn.commit()
+            QMessageBox.question(self,"Adding Angles","Done !",QMessageBox.Ok,QMessageBox.Ok)
+        else:
+            pass
+    def import_c(self):
+        book = xlrd.open_workbook('new_sections.xlsx')
+        third_sheet = book.sheet_by_index(2)
+        id_list = []
+        for i in range(1,third_sheet.nrows):
+            id_list.append(str(int(third_sheet.row_values(i)[0])))
+        input_id,ok=QtWidgets.QInputDialog.getItem(self,"Import Channels","Select an id to import its data",id_list,0,False)
+        if ok:
+            data = third_sheet.row_values(int(input_id) - 6)
+            query = "insert into Channels values ('"+str(data[0])+"','"+str(data[1])+"','"+str(data[2])+"','"+str(data[3])+"','"+str(data[4])+"','"+str(data[5])+"','"+str(data[6])+"','"+str(data[7])+"','"+str(data[8])+"',\
+                '"+str(data[9])+"','"+str(data[10])+"','"+str(data[11])+"','"+str(data[12])+"','"+str(data[13])+"','"+str(data[14])+"','"+str(data[15])+"','"+str(data[16])+"','"+str(data[17])+"','"+data[18]+"',\
+                    '"+data[19]+"','"+data[20]+"');"
+            self.c.execute(query)
+            self.conn.commit()
+            QMessageBox.question(self,"Adding Channels","Done !",QMessageBox.Ok,QMessageBox.Ok)
+        else:
+            pass
     def exit(self):
         import sys
         QMessageBox.question(self,"Exit","All Changes are saved !",QMessageBox.Ok,QMessageBox.Ok)
         sys.exit()
-    
-
         
-
-
-        
-    
-        
-
 if __name__ == "__main__":
     import sys
     app = QApplication([])
