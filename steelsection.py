@@ -208,50 +208,64 @@ class MainWindow(QMainWindow, Ui_Steel):
         self.lineEdit_320.setText("")
         QMessageBox.question(self,"Clear Filed","Done !",QMessageBox.Ok,QMessageBox.Ok)
     def add_a(self):
-        # check_query = "select Id from Angles where Id =?",(str(self.lineEdit_100.text(),)
-        self.c.execute("select Id from Angles where Id =?",(str(self.lineEdit_100.text()),))
-        q_check = self.c.fetchall()
-        if q_check:
-            QMessageBox.question(self,"Error","Steel with this id already exists. ",QMessageBox.Ok,QMessageBox.Ok)
+        if self.empty_field("a") == False:
+            QMessageBox.question(self,"Error","Fields can't be empty .",QMessageBox.Ok,QMessageBox.Ok)
+        elif str(self.lineEdit_100.text()).isnumeric() == False:
+            QMessageBox.question(self,"Error","ID should be an integer .",QMessageBox.Ok,QMessageBox.Ok)
         else:
-            query = "insert into Angles values ('"+str(self.lineEdit_100.text())+"','"+str(self.lineEdit_101.text())+"','"+str(self.lineEdit_102.text())+"','"+str(self.lineEdit_103.text())+"',\
-                '"+str(self.lineEdit_104.text())+"','"+str(self.lineEdit_105.text())+"','"+str(self.lineEdit_106.text())+"','"+str(self.lineEdit_107.text())+"',\
-                    '"+str(self.lineEdit_108.text())+"','"+str(self.lineEdit_109.text())+"','"+str(self.lineEdit_110.text())+"','"+str(self.lineEdit_111.text())+"',\
-                        '"+str(self.lineEdit_112.text())+"','"+str(self.lineEdit_113.text())+"','"+str(self.lineEdit_114.text())+"','"+str(self.lineEdit_115.text())+"',\
-                        '"+str(self.lineEdit_116.text())+"','"+str(self.lineEdit_117.text())+"','"+str(self.lineEdit_118.text())+"','"+str(self.lineEdit_119.text())+"',\
-                            '"+str(self.lineEdit_120.text())+"','"+str(self.lineEdit_121.text())+"','"+str(self.lineEdit_122.text())+"','"+str(self.lineEdit_123.text())+"');"
-            self.c.execute(query)
-            self.conn.commit()
-            QMessageBox.question(self,"Adding Angles","Done !",QMessageBox.Ok,QMessageBox.Ok)
+            self.c.execute("select Id from Angles where Id =?",(str(self.lineEdit_100.text()),))
+            q_check = self.c.fetchall()
+            if q_check:
+                QMessageBox.question(self,"Error","Steel with this id already exists. ",QMessageBox.Ok,QMessageBox.Ok)
+            else:
+                query = "insert into Angles values ('"+str(self.lineEdit_100.text())+"','"+str(self.lineEdit_101.text())+"','"+str(self.lineEdit_102.text())+"','"+str(self.lineEdit_103.text())+"',\
+                    '"+str(self.lineEdit_104.text())+"','"+str(self.lineEdit_105.text())+"','"+str(self.lineEdit_106.text())+"','"+str(self.lineEdit_107.text())+"',\
+                        '"+str(self.lineEdit_108.text())+"','"+str(self.lineEdit_109.text())+"','"+str(self.lineEdit_110.text())+"','"+str(self.lineEdit_111.text())+"',\
+                            '"+str(self.lineEdit_112.text())+"','"+str(self.lineEdit_113.text())+"','"+str(self.lineEdit_114.text())+"','"+str(self.lineEdit_115.text())+"',\
+                            '"+str(self.lineEdit_116.text())+"','"+str(self.lineEdit_117.text())+"','"+str(self.lineEdit_118.text())+"','"+str(self.lineEdit_119.text())+"',\
+                                '"+str(self.lineEdit_120.text())+"','"+str(self.lineEdit_121.text())+"','"+str(self.lineEdit_122.text())+"','"+str(self.lineEdit_123.text())+"');"
+                self.c.execute(query)
+                self.conn.commit()
+                QMessageBox.question(self,"Adding Angles","Done !",QMessageBox.Ok,QMessageBox.Ok)
     def add_b(self):
-        self.c.execute("select Id from Beams where Id =?",(str(self.lineEdit_200.text()),))
-        q_check = self.c.fetchall()
-        if q_check:
-            QMessageBox.question(self,"Error","Steel with this id already exists. ",QMessageBox.Ok,QMessageBox.Ok)
+        if self.empty_field("b") == False:
+            QMessageBox.question(self,"Error","Fields can't be empty .",QMessageBox.Ok,QMessageBox.Ok)
+        elif str(self.lineEdit_200.text()).isnumeric() == False:
+            QMessageBox.question(self,"Error","ID should be an integer .",QMessageBox.Ok,QMessageBox.Ok)
         else:
-            query = "insert into Beams values ('"+str(self.lineEdit_200.text())+"','"+str(self.lineEdit_201.text())+"','"+str(self.lineEdit_202.text())+"','"+str(self.lineEdit_203.text())+"',\
-                '"+str(self.lineEdit_204.text())+"','"+str(self.lineEdit_205.text())+"','"+str(self.lineEdit_206.text())+"','"+str(self.lineEdit_207.text())+"',\
-                    '"+str(self.lineEdit_208.text())+"','"+str(self.lineEdit_209.text())+"','"+str(self.lineEdit_210.text())+"','"+str(self.lineEdit_211.text())+"',\
-                        '"+str(self.lineEdit_212.text())+"','"+str(self.lineEdit_213.text())+"','"+str(self.lineEdit_214.text())+"','"+str(self.lineEdit_215.text())+"',\
-                        '"+str(self.lineEdit_216.text())+"','"+str(self.lineEdit_217.text())+"','"+str(self.lineEdit_218.text())+"','"+str(self.lineEdit_219.text())+"');"
-            self.c.execute(query)
-            self.conn.commit()
-            QMessageBox.question(self,"Adding Beams","Done !",QMessageBox.Ok,QMessageBox.Ok)
+            self.c.execute("select Id from Beams where Id =?",(str(self.lineEdit_200.text()),))
+            q_check = self.c.fetchall()
+            if q_check:
+                QMessageBox.question(self,"Error","Steel with this id already exists. ",QMessageBox.Ok,QMessageBox.Ok)
+            else:
+                query = "insert into Beams values ('"+str(self.lineEdit_200.text())+"','"+str(self.lineEdit_201.text())+"','"+str(self.lineEdit_202.text())+"','"+str(self.lineEdit_203.text())+"',\
+                    '"+str(self.lineEdit_204.text())+"','"+str(self.lineEdit_205.text())+"','"+str(self.lineEdit_206.text())+"','"+str(self.lineEdit_207.text())+"',\
+                        '"+str(self.lineEdit_208.text())+"','"+str(self.lineEdit_209.text())+"','"+str(self.lineEdit_210.text())+"','"+str(self.lineEdit_211.text())+"',\
+                            '"+str(self.lineEdit_212.text())+"','"+str(self.lineEdit_213.text())+"','"+str(self.lineEdit_214.text())+"','"+str(self.lineEdit_215.text())+"',\
+                            '"+str(self.lineEdit_216.text())+"','"+str(self.lineEdit_217.text())+"','"+str(self.lineEdit_218.text())+"','"+str(self.lineEdit_219.text())+"');"
+                self.c.execute(query)
+                self.conn.commit()
+                QMessageBox.question(self,"Adding Beams","Done !",QMessageBox.Ok,QMessageBox.Ok)
     def add_c(self):
-        self.c.execute("select Id from Channels where Id =?",(str(self.lineEdit_300.text()),))
-        q_check = self.c.fetchall()
-        if q_check:
-            QMessageBox.question(self,"Error","Steel with this id already exists. ",QMessageBox.Ok,QMessageBox.Ok)
+        if self.empty_field("c") == False:
+            QMessageBox.question(self,"Error","Fields can't be empty .",QMessageBox.Ok,QMessageBox.Ok)
+        elif str(self.lineEdit_300.text()).isnumeric() == False:
+            QMessageBox.question(self,"Error","ID should be an integer .",QMessageBox.Ok,QMessageBox.Ok)
         else:
-            query = "insert into Channels values ('"+str(self.lineEdit_300.text())+"','"+str(self.lineEdit_301.text())+"','"+str(self.lineEdit_302.text())+"','"+str(self.lineEdit_303.text())+"',\
-                '"+str(self.lineEdit_304.text())+"','"+str(self.lineEdit_305.text())+"','"+str(self.lineEdit_306.text())+"','"+str(self.lineEdit_307.text())+"',\
-                    '"+str(self.lineEdit_308.text())+"','"+str(self.lineEdit_309.text())+"','"+str(self.lineEdit_310.text())+"','"+str(self.lineEdit_311.text())+"',\
-                        '"+str(self.lineEdit_312.text())+"','"+str(self.lineEdit_313.text())+"','"+str(self.lineEdit_314.text())+"','"+str(self.lineEdit_315.text())+"',\
-                        '"+str(self.lineEdit_316.text())+"','"+str(self.lineEdit_317.text())+"','"+str(self.lineEdit_318.text())+"','"+str(self.lineEdit_319.text())+"',\
-                            '"+str(self.lineEdit_320.text())+"');"
-            self.c.execute(query)
-            self.conn.commit()
-            QMessageBox.question(self,"Adding Channels","Done !",QMessageBox.Ok,QMessageBox.Ok)
+            self.c.execute("select Id from Channels where Id =?",(str(self.lineEdit_300.text()),))
+            q_check = self.c.fetchall()
+            if q_check:
+                QMessageBox.question(self,"Error","Steel with this id already exists. ",QMessageBox.Ok,QMessageBox.Ok)
+            else:
+                query = "insert into Channels values ('"+str(self.lineEdit_300.text())+"','"+str(self.lineEdit_301.text())+"','"+str(self.lineEdit_302.text())+"','"+str(self.lineEdit_303.text())+"',\
+                    '"+str(self.lineEdit_304.text())+"','"+str(self.lineEdit_305.text())+"','"+str(self.lineEdit_306.text())+"','"+str(self.lineEdit_307.text())+"',\
+                        '"+str(self.lineEdit_308.text())+"','"+str(self.lineEdit_309.text())+"','"+str(self.lineEdit_310.text())+"','"+str(self.lineEdit_311.text())+"',\
+                            '"+str(self.lineEdit_312.text())+"','"+str(self.lineEdit_313.text())+"','"+str(self.lineEdit_314.text())+"','"+str(self.lineEdit_315.text())+"',\
+                            '"+str(self.lineEdit_316.text())+"','"+str(self.lineEdit_317.text())+"','"+str(self.lineEdit_318.text())+"','"+str(self.lineEdit_319.text())+"',\
+                                '"+str(self.lineEdit_320.text())+"');"
+                self.c.execute(query)
+                self.conn.commit()
+                QMessageBox.question(self,"Adding Channels","Done !",QMessageBox.Ok,QMessageBox.Ok)
     def import_a(self):
         book = xlrd.open_workbook('new_sections.xlsx')
         second_sheet = book.sheet_by_index(1)
@@ -307,6 +321,148 @@ class MainWindow(QMainWindow, Ui_Steel):
         import sys
         QMessageBox.question(self,"Exit","All Changes are saved !",QMessageBox.Ok,QMessageBox.Ok)
         sys.exit()
+    def empty_field(self,f):
+        if f == "a":
+            if not str(self.lineEdit_100.text()):
+                return False
+            elif not str(self.lineEdit_101.text()):
+                return False
+            elif not str(self.lineEdit_102.text()):
+                return False
+            elif not str(self.lineEdit_103.text()):
+                return False
+            elif not str(self.lineEdit_104.text()):
+                return False
+            elif not str(self.lineEdit_105.text()):
+                return False
+            elif not str(self.lineEdit_106.text()):
+                return False
+            elif not str(self.lineEdit_107.text()):
+                return False
+            elif not str(self.lineEdit_108.text()):
+                return False
+            elif not str(self.lineEdit_109.text()):
+                return False
+            elif not str(self.lineEdit_110.text()):
+                return False
+            elif not str(self.lineEdit_111.text()):
+                return False
+            elif not str(self.lineEdit_112.text()):
+                return False
+            elif not str(self.lineEdit_113.text()):
+                return False
+            elif not str(self.lineEdit_114.text()):
+                return False
+            elif not str(self.lineEdit_115.text()):
+                return False
+            elif not str(self.lineEdit_116.text()):
+                return False
+            elif not str(self.lineEdit_117.text()):
+                return False
+            elif not str(self.lineEdit_118.text()):
+                return False
+            elif not str(self.lineEdit_119.text()):
+                return False
+            elif not str(self.lineEdit_120.text()):
+                return False
+            elif not str(self.lineEdit_121.text()):
+                return False
+            elif not str(self.lineEdit_122.text()):
+                return False
+            elif not str(self.lineEdit_123.text()):
+                return False
+            else:
+                return True
+        elif f == "b":
+            if not str(self.lineEdit_200.text()):
+                return False
+            elif not str(self.lineEdit_201.text()):
+                return False
+            elif not str(self.lineEdit_202.text()):
+                return False
+            elif not str(self.lineEdit_203.text()):
+                return False
+            elif not str(self.lineEdit_204.text()):
+                return False
+            elif not str(self.lineEdit_205.text()):
+                return False
+            elif not str(self.lineEdit_206.text()):
+                return False
+            elif not str(self.lineEdit_207.text()):
+                return False
+            elif not str(self.lineEdit_208.text()):
+                return False
+            elif not str(self.lineEdit_209.text()):
+                return False
+            elif not str(self.lineEdit_210.text()):
+                return False
+            elif not str(self.lineEdit_211.text()):
+                return False
+            elif not str(self.lineEdit_212.text()):
+                return False
+            elif not str(self.lineEdit_213.text()):
+                return False
+            elif not str(self.lineEdit_214.text()):
+                return False
+            elif not str(self.lineEdit_215.text()):
+                return False
+            elif not str(self.lineEdit_216.text()):
+                return False
+            elif not str(self.lineEdit_217.text()):
+                return False
+            elif not str(self.lineEdit_218.text()):
+                return False
+            elif not str(self.lineEdit_219.text()):
+                return False
+            else:
+                return True
+        else:
+            if not str(self.lineEdit_300.text()):
+                return False
+            elif not str(self.lineEdit_301.text()):
+                return False
+            elif not str(self.lineEdit_302.text()):
+                return False
+            elif not str(self.lineEdit_303.text()):
+                return False
+            elif not str(self.lineEdit_304.text()):
+                return False
+            elif not str(self.lineEdit_305.text()):
+                return False
+            elif not str(self.lineEdit_306.text()):
+                return False
+            elif not str(self.lineEdit_307.text()):
+                return False
+            elif not str(self.lineEdit_308.text()):
+                return False
+            elif not str(self.lineEdit_309.text()):
+                return False
+            elif not str(self.lineEdit_310.text()):
+                return False
+            elif not str(self.lineEdit_311.text()):
+                return False
+            elif not str(self.lineEdit_312.text()):
+                return False
+            elif not str(self.lineEdit_313.text()):
+                return False
+            elif not str(self.lineEdit_314.text()):
+                return False
+            elif not str(self.lineEdit_315.text()):
+                return False
+            elif not str(self.lineEdit_316.text()):
+                return False
+            elif not str(self.lineEdit_317.text()):
+                return False
+            elif not str(self.lineEdit_318.text()):
+                return False
+            elif not str(self.lineEdit_319.text()):
+                return False
+            elif not str(self.lineEdit_320.text()):
+                return False
+            else:
+                return True
+
+
         
 if __name__ == "__main__":
     import sys
