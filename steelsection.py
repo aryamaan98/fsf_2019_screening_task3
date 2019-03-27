@@ -275,12 +275,17 @@ class MainWindow(QMainWindow, Ui_Steel):
         input_id,ok=QtWidgets.QInputDialog.getItem(self,"Import Angles","Select an id to import its data",id_list,0,False)
         if ok:
             data = second_sheet.row_values(int(input_id) - 6)
-            query = "insert into Angles values ('"+str(data[0])+"','"+str(data[1])+"','"+str(data[2])+"','"+str(data[3])+"','"+str(data[4])+"','"+str(data[5])+"','"+str(data[6])+"','"+str(data[7])+"','"+str(data[8])+"',\
-                '"+str(data[9])+"','"+str(data[10])+"','"+str(data[11])+"','"+str(data[12])+"','"+str(data[13])+"','"+str(data[14])+"','"+str(data[15])+"','"+str(data[16])+"','"+str(data[17])+"','"+data[18]+"','"+data[19]+"','"+data[20]+"',\
-                    '"+str(data[21])+"','"+str(data[22])+"','"+str(data[23])+"');"
-            self.c.execute(query)
-            self.conn.commit()
-            QMessageBox.question(self,"Adding Angles","Done !",QMessageBox.Ok,QMessageBox.Ok)
+            self.c.execute("select Id from Angles where Id =?",(int(input_id),))
+            q_check = self.c.fetchall()
+            if q_check:
+                QMessageBox.question(self,"Error","Steel with this id is already imported. ",QMessageBox.Ok,QMessageBox.Ok)
+            else:
+                query = "insert into Angles values ('"+str(data[0])+"','"+str(data[1])+"','"+str(data[2])+"','"+str(data[3])+"','"+str(data[4])+"','"+str(data[5])+"','"+str(data[6])+"','"+str(data[7])+"','"+str(data[8])+"',\
+                    '"+str(data[9])+"','"+str(data[10])+"','"+str(data[11])+"','"+str(data[12])+"','"+str(data[13])+"','"+str(data[14])+"','"+str(data[15])+"','"+str(data[16])+"','"+str(data[17])+"','"+data[18]+"','"+data[19]+"','"+data[20]+"',\
+                        '"+str(data[21])+"','"+str(data[22])+"','"+str(data[23])+"');"
+                self.c.execute(query)
+                self.conn.commit()
+                QMessageBox.question(self,"Adding Angles","Done !",QMessageBox.Ok,QMessageBox.Ok)
         else:
             pass
     def import_b(self):
@@ -292,12 +297,17 @@ class MainWindow(QMainWindow, Ui_Steel):
         input_id,ok=QtWidgets.QInputDialog.getItem(self,"Import Beams","Select an id to import its data",id_list,0,False)
         if ok:
             data = first_sheet.row_values(int(input_id) - 9)
-            query = "insert into Beams values ('"+str(data[0])+"','"+str(data[1])+"','"+str(data[2])+"','"+str(data[3])+"','"+str(data[4])+"','"+str(data[5])+"','"+str(data[6])+"','"+str(data[7])+"','"+str(data[8])+"',\
-                '"+str(data[9])+"','"+str(data[10])+"','"+str(data[11])+"','"+str(data[12])+"','"+str(data[13])+"','"+str(data[14])+"','"+str(data[15])+"','"+str(data[16])+"','"+str(data[17])+"','"+data[18]+"',\
-                    '"+data[19]+"');"
-            self.c.execute(query)
-            self.conn.commit()
-            QMessageBox.question(self,"Adding Angles","Done !",QMessageBox.Ok,QMessageBox.Ok)
+            self.c.execute("select Id from Beams where Id =?",(int(input_id),))
+            q_check = self.c.fetchall()
+            if q_check:
+                QMessageBox.question(self,"Error","Steel with this id is already imported. ",QMessageBox.Ok,QMessageBox.Ok)
+            else:
+                query = "insert into Beams values ('"+str(data[0])+"','"+str(data[1])+"','"+str(data[2])+"','"+str(data[3])+"','"+str(data[4])+"','"+str(data[5])+"','"+str(data[6])+"','"+str(data[7])+"','"+str(data[8])+"',\
+                    '"+str(data[9])+"','"+str(data[10])+"','"+str(data[11])+"','"+str(data[12])+"','"+str(data[13])+"','"+str(data[14])+"','"+str(data[15])+"','"+str(data[16])+"','"+str(data[17])+"','"+data[18]+"',\
+                        '"+data[19]+"');"
+                self.c.execute(query)
+                self.conn.commit()
+                QMessageBox.question(self,"Adding Angles","Done !",QMessageBox.Ok,QMessageBox.Ok)
         else:
             pass
     def import_c(self):
@@ -309,12 +319,17 @@ class MainWindow(QMainWindow, Ui_Steel):
         input_id,ok=QtWidgets.QInputDialog.getItem(self,"Import Channels","Select an id to import its data",id_list,0,False)
         if ok:
             data = third_sheet.row_values(int(input_id) - 6)
-            query = "insert into Channels values ('"+str(data[0])+"','"+str(data[1])+"','"+str(data[2])+"','"+str(data[3])+"','"+str(data[4])+"','"+str(data[5])+"','"+str(data[6])+"','"+str(data[7])+"','"+str(data[8])+"',\
-                '"+str(data[9])+"','"+str(data[10])+"','"+str(data[11])+"','"+str(data[12])+"','"+str(data[13])+"','"+str(data[14])+"','"+str(data[15])+"','"+str(data[16])+"','"+str(data[17])+"','"+data[18]+"',\
-                    '"+data[19]+"','"+data[20]+"');"
-            self.c.execute(query)
-            self.conn.commit()
-            QMessageBox.question(self,"Adding Channels","Done !",QMessageBox.Ok,QMessageBox.Ok)
+            self.c.execute("select Id from Channels where Id =?",(int(input_id),))
+            q_check = self.c.fetchall()
+            if q_check:
+                QMessageBox.question(self,"Error","Steel with this id is already imported. ",QMessageBox.Ok,QMessageBox.Ok)
+            else:
+                query = "insert into Channels values ('"+str(data[0])+"','"+str(data[1])+"','"+str(data[2])+"','"+str(data[3])+"','"+str(data[4])+"','"+str(data[5])+"','"+str(data[6])+"','"+str(data[7])+"','"+str(data[8])+"',\
+                    '"+str(data[9])+"','"+str(data[10])+"','"+str(data[11])+"','"+str(data[12])+"','"+str(data[13])+"','"+str(data[14])+"','"+str(data[15])+"','"+str(data[16])+"','"+str(data[17])+"','"+data[18]+"',\
+                        '"+data[19]+"','"+data[20]+"');"
+                self.c.execute(query)
+                self.conn.commit()
+                QMessageBox.question(self,"Adding Channels","Done !",QMessageBox.Ok,QMessageBox.Ok)
         else:
             pass
     def exit(self):

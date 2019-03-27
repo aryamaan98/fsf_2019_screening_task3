@@ -23,7 +23,7 @@ class Ui_Steel(object):
         self.pushButton_c_import.setGeometry(QtCore.QRect(670, 40, 75, 23))
         self.pushButton_c_import.setObjectName("pushButton_c_import")
         self.label_64 = QtWidgets.QLabel(Steel)
-        self.label_64.setGeometry(QtCore.QRect(220, 20, 91, 31))
+        self.label_64.setGeometry(QtCore.QRect(200, 10, 91, 41))
         font = QtGui.QFont()
         font.setPointSize(10)
         font.setBold(True)
@@ -478,7 +478,7 @@ class Ui_Steel(object):
 
     def retranslateUi(self, Steel):
         _translate = QtCore.QCoreApplication.translate
-        Steel.setWindowTitle(_translate("Steel", "Dialog"))
+        Steel.setWindowTitle(_translate("Steel", "STEEL SECTIONS"))
         self.pushButton_b_add.setText(_translate("Steel", "Add"))
         self.pushButton_b_import.setText(_translate("Steel", "Import"))
         self.pushButton_a_add.setText(_translate("Steel", "Add"))
@@ -560,5 +560,4 @@ class Ui_Steel(object):
         self.pushButton_a_load.setText(_translate("Steel", "Load Data"))
         self.pushButton_b_load.setText(_translate("Steel", "Load Data"))
         self.pushButton_c_load.setText(_translate("Steel", "Load Data"))
-
 
