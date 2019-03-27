@@ -1,7 +1,7 @@
 # Steel Section Application
 ### Desktop Application for displaying the properties of Steel Sections
 
-This project builds a desktop application built using PyQt5 which is a Python binding of the cross-platform GUI toolkit.The application inputs data from a database as well as from a excel sheet.It displays all the properties of a user selected steel section.It can also add properties of a steel section into the database by inputting its details in the respective fields.
+This project builds a desktop application using PyQt5 which is a Python binding of the cross-platform GUI toolkit. The application inputs data from a database as well as from an excel sheet. It displays all the properties of a user selected steel section. It can also add properties of a steel section into the database by inputting its details in the respective fields.
 
 ## Installation
 
