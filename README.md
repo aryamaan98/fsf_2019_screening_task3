@@ -14,7 +14,7 @@ pip install pysqlite3
 ```
 
 ## How to open the application ?
-Clone the repository then open the directory and type in the following command in your Terminal.
+Clone the repository (or run steelsections.exe) then open the directory and type in the following command in your Terminal.
 
 ```bash
 python steelsection.py
@@ -32,7 +32,9 @@ Here is a demo what Project look like once it's set up.
 **/**
   &emsp; &emsp; `MainWindow.ui`: UI file
   &emsp; &emsp; `MainWindow.py`: UI python file 
-  &emsp; &emsp; `steelsection.py`: Contains all the functionalities 
+  &emsp; &emsp; `steelsection.py`: Contains all the functionalities
+  &emsp; &emsp; `installer_script.iss`: Script for the installer.
+  &emsp; &emsp; `steelsection.exe`: Installer
 **img/**
   &emsp; &emsp;  Images of the application
 
